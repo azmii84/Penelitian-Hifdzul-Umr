@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Penelitian Hifdzul Umr</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; background-color: #f1f5f9; color: #1e293b; }
+        th, td { border: 1px solid #e2e8f0; text-align: center; }
+        .text-left-align { text-align: left !important; }
+        .sidebar-item-active { background-color: #0f172a; border-left: 4px solid #3b82f6; color: #ffffff; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+
+    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col justify-between shrink-0">
+        <div>
+            <div class="p-6 border-b border-slate-800 text-center">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-content-center mx-auto mb-2 shadow-lg">
+                    <span class="text-white font-bold text-lg">HU</span>
+                </div>
+                <h2 class="text-white font-bold tracking-wide text-sm uppercase">Hifdzul Umr</h2>
+                <p class="text-[10px] text-slate-400 mt-0.5">Academic Dashboard</p>
+            </div>
+            
+            <nav class="p-4 space-y-1 text-xs font-medium">
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded sidebar-item-active">
+                    <span>📊</span> <span>Beranda Utama</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded hover:bg-slate-800 transition-colors">
+                    <span>📁</span> <span>Per Kategori</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded hover:bg-slate-800 transition-colors">
+                    <span>📋</span> <span>Pernyataan Kuesioner</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded hover:bg-slate-800 transition-colors">
+                    <span>🏢</span> <span>Per Kuttab / Lembaga</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="p-4 border-t border-slate-800 bg-slate-950/40 text-[11px] text-slate-400">
+            <div class="flex justify-between mb-1">
+                <span>Total Gabungan:</span>
+                <span class="text-white font-bold">92 Guru</span>
+            </div>
+            <div class="flex justify-between">
+                <span>Tahun Penelitian:</span>
+                <span class="text-white font-bold">2026</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-8 overflow-y-auto">
+        
+        <header class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-slate-200 pb-4 mb-6">
+            <div>
+                <h1 class="text-xl font-bold text-slate-800 tracking-tight">Pengaruh Internalisasi Konsep Penjagaan Usia (Kitab Hifdzul Umr) terhadap Manajemen Waktu Guru</h1>
+                <p class="text-xs text-slate-500 mt-0.5">Visualisasi Kuantitatif Persentase Capaian Hasil Instrumen Penelitian</p>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-xs flex items-center space-x-4">
+                <div class="p-3 bg-slate-100 text-slate-600 rounded-lg text-lg">👥</div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Total Sampel Gabungan</p>
+                    <p class="text-xl font-bold text-slate-800">92 Guru</p>
+                </div>
+            </div>
+            <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-xs flex items-center space-x-4">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-lg text-lg">👦</div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Kuttab AF Depok Ikhwan</p>
+                    <p class="text-xl font-bold text-blue-700">37 Guru</p>
+                </div>
+            </div>
+            <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-xs flex items-center space-x-4">
+                <div class="p-3 bg-amber-50 text-amber-600 rounded-lg text-lg">👧</div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Kuttab AF Depok Akhwat</p>
+                    <p class="text-xl font-bold text-amber-700">44 Guru</p>
+                </div>
+            </div>
+            <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-xs flex items-center space-x-4">
+                <div class="p-3 bg-emerald-50 text-emerald-600 rounded-lg text-lg">🏢</div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Kuttab Budi Ashari</p>
+                    <p class="text-xl font-bold text-emerald-700">11 Guru</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs lg:col-span-1">
+                <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-4 border-b pb-2">📊 Skor per Kategori Makro (Gabungan)</h3>
+                <div class="space-y-4 pt-2">
+                    <div>
+                        <div class="flex justify-between text-xs font-medium mb-1">
+                            <span>Sudut Pandang Tentang Usia</span>
+                            <span class="font-bold text-emerald-600">87.8%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-emerald-500 h-2.5 rounded-full" style="width: 87.8%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-medium mb-1">
+                            <span>Perilaku dalam Amal</span>
+                            <span class="font-bold text-blue-600">79.7%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 79.7%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-medium mb-1">
+                            <span>Perilaku ketika Istirahat</span>
+                            <span class="font-bold text-amber-600">77.3%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-amber-500 h-2.5 rounded-full" style="width: 77.3%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs lg:col-span-2">
+                <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-4 border-b pb-2">🏛️ Perbandingan Akumulatif Skor Keseluruhan Indikator</h3>
+                <div class="grid grid-cols-4 gap-2 text-center pt-4 items-end h-32">
+                    <div class="flex flex-col items-center justify-end h-full border-r border-dashed border-slate-300 pr-2">
+                        <span class="text-xs font-bold text-slate-600 mb-1">80.4%</span>
+                        <div class="bg-slate-500 w-12 rounded-t-sm" style="height: 80.4%"></div>
+                        <span class="text-[10px] font-bold text-slate-600 mt-2">Gabungan (92)</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-end h-full">
+                        <span class="text-xs font-bold text-blue-600 mb-1">81.7%</span>
+                        <div class="bg-blue-600 w-12 rounded-t-sm" style="height: 81.7%"></div>
+                        <span class="text-[10px] font-medium text-slate-500 mt-2">Kutab AF Depok Ikhwan</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-end h-full">
+                        <span class="text-xs font-bold text-amber-600 mb-1">78.2%</span>
+                        <div class="bg-amber-500 w-12 rounded-t-sm" style="height: 78.2%"></div>
+                        <span class="text-[10px] font-medium text-slate-500 mt-2">Kutab AF Depok Akhwat</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-end h-full">
+                        <span class="text-xs font-bold text-emerald-600 mb-1">84.4%</span>
+                        <div class="bg-emerald-600 w-12 rounded-t-sm" style="height: 84.4%"></div>
+                        <span class="text-[10px] font-medium text-slate-500 mt-2">Kuttab Budi Ashari</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between border-b pb-4 mb-4">
+                <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide">📋 Matriks Perbandingan Detail Setiap Butir Kuesioner</h3>
+                
+                <div class="flex items-center space-x-1 mt-3 md:mt-0 bg-slate-100 p-1 rounded-lg">
+                    <button onclick="filterCategory('all')" id="btn-all" class="px-3 py-1 text-[11px] font-semibold rounded-md tab-active bg-white shadow-xs text-slate-800 font-bold">Semua</button>
+                    <button onclick="filterCategory('usia')" id="btn-usia" class="px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Sudut Pandang Usia</button>
+                    <button onclick="filterCategory('amal')" id="btn-amal" class="px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Perilaku Amal</button>
+                    <button onclick="filterCategory('istirahat')" id="btn-istirahat" class="px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Perilaku Istirahat</button>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs" id="kuesioner-table">
+                    <thead>
+                        <tr class="bg-slate-800 text-white font-semibold">
+                            <th class="p-2.5 w-10" rowspan="2">No</th>
+                            <th class="p-2.5 text-left-align w-80" rowspan="2">Butir Pernyataan Kuesioner</th>
+                            <th class="p-2.5 w-28" rowspan="2">Kategori</th>
+                            <th class="p-2.5 w-20 bg-slate-700 text-amber-300 font-bold" rowspan="2">Gabungan<br>(92 Guru)</th>
+                            <th class="p-2 border-b border-slate-700" colspan="3">Skor Hasil Per Kelompok</th>
+                            <th class="p-2.5 w-24" rowspan="2">Skor Tertinggi</th>
+                            <th class="p-2.5 w-24" rowspan="2">Skor Terendah</th>
+                            <th class="p-2.5 w-16" rowspan="2">Selisih</th>
+                        </tr>
+                        <tr class="bg-slate-700 text-white font-medium text-[10px]">
+                            <th class="p-1.5 w-20">Kuttab AF Depok Ikhwan</th>
+                            <th class="p-1.5 w-20">Kuttab AF Depok Akhwat</th>
+                            <th class="p-1.5 w-20">Kuttab Budi Ashari</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200" id="table-body">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 mt-4 text-[10px] font-semibold p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                <span class="text-slate-400 uppercase tracking-wider">Kategori Capaian Skor:</span>
+                <div class="flex items-center"><div class="w-3.5 h-3.5 bg-emerald-100 border border-emerald-300 mr-1.5 rounded-sm"></div> Sangat Baik (&ge; 85%)</div>
+                <div class="flex items-center"><div class="w-3.5 h-3.5 bg-blue-100 border border-blue-300 mr-1.5 rounded-sm"></div> Baik (70% - 84.9%)</div>
+                <div class="flex items-center"><div class="w-3.5 h-3.5 bg-amber-100 border border-amber-300 mr-1.5 rounded-sm"></div> Cukup (60% - 69.9%)</div>
+                <div class="flex items-center"><div class="w-3.5 h-3.5 bg-red-100 border border-red-300 mr-1.5 rounded-sm"></div> Kurang (&lt; 60%)</div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Data mentah yang disesuaikan akurat berdasarkan Halaman 2 dan Halaman 3 lampiran berkas penelitian
+        const dataPenelitian = [
+            // KATEGORI 1: SUDUT PANDANG TENTANG USIA
+            { no: 1, text: "Aku selalu ingat bahwa waktu yang berlalu tidak akan terulang", cat: "usia", catText: "Sudut Pandang Usia", total: 91.8, ikhwan: 93.2, akhwat: 89.2, budi: 97.7 },
+            { no: 2, text: "Aku tahu bahwa akhirat adalah tujuan", cat: "usia", catText: "Sudut Pandang Usia", total: 79.3, ikhwan: 96.6, akhwat: 93.8, budi: 84.1 },
+            { no: 3, text: "Aku bisa membedakan kebutuhan dan keinginan", cat: "usia", catText: "Sudut Pandang Usia", total: 84.2, ikhwan: 89.2, akhwat: 80.1, budi: 84.1 },
+            { no: 4, text: "Aku tidak menyalahkan dan meratapi masa lalu", cat: "usia", catText: "Sudut Pandang Usia", total: 95.7, ikhwan: 79.7, akhwat: 77.8, budi: 100.0 },
+            
+            // KATEGORI 2: PERILAKU DALAM AMAL
+            { no: 1, text: "Aku selalu bersungguh-sungguh ketika melakukan pekerjaan dan menyelesaikannya", cat: "amal", catText: "Perilaku Amal", total: 78.8, ikhwan: 78.4, akhwat: 76.7, budi: 88.6 },
+            { no: 2, text: "Aku tidak perlu menunggu keadaan yang mendukung untuk beramal (Ramadhan untuk khatam Al-Qur'an atau program untuk membaca buku)", cat: "amal", catText: "Perilaku Amal", total: 77.7, ikhwan: 80.4, akhwat: 74.4, budi: 81.8 },
+            { no: 3, text: "Aku berhati-hati dan mempertimbangkan konsekuensi sebelum bertindak", cat: "amal", catText: "Perilaku Amal", total: 80.2, ikhwan: 82.4, akhwat: 76.7, budi: 86.4 },
+            { no: 4, text: "Aku tetap memanfaatkan waktu yang sedikit untuk beramal", cat: "amal", catText: "Perilaku Amal", total: 79.3, ikhwan: 86.5, akhwat: 76.7, budi: 79.5 },
+            { no: 5, text: "Aku berusaha konsisten beramal sesuai dengan kemampuan", cat: "amal", catText: "Perilaku Amal", total: 86.4, ikhwan: 79.7, akhwat: 76.1, budi: 90.9 },
+            { no: 6, text: "Aku berusaha menjaga keikhlasan dalam beramal", cat: "amal", catText: "Perilaku Amal", total: 77.2, ikhwan: 77.0, akhwat: 85.2, budi: 90.9 },
+            { no: 7, text: "Aku memiliki amalan khusus yang rutin aku jaga", cat: "amal", catText: "Perilaku Amal", total: 79.9, ikhwan: 81.8, akhwat: 76.7, budi: 86.4 },
+            { no: 8, text: "Aku memanfaatkan masa muda untuk hal yang bermanfaat", cat: "amal", catText: "Perilaku Amal", total: 78.0, ikhwan: 78.4, akhwat: 77.3, budi: 79.5 },
+            
+            // KATEGORI 3: PERILAKU KETIKA ISTIRAHAT
+            { no: 1, text: "Aku tidak buru-buru ingin selesai ketika beramal karena ingin segera beristirahat", cat: "istirahat", catText: "Perilaku Istirahat", total: 69.6, ikhwan: 93.2, akhwat: 92.0, budi: 81.8 },
+            { no: 2, text: "Aku berada di lingkungan yang mendukung kebaikan", cat: "istirahat", catText: "Perilaku Istirahat", total: 93.2, ikhwan: 72.3, akhwat: 64.2, budi: 97.7 },
+            { no: 3, text: "Aku bersungguh-sungguh dan tidak mudah menyerah dalam mencapai tujuan", cat: "istirahat", catText: "Perilaku Istirahat", total: 79.3, ikhwan: 80.4, akhwat: 77.8, budi: 81.8 },
+            { no: 4, text: "Kondisi lemah dalam hal apapun tidak menyurutkan semangatku", cat: "istirahat", catText: "Perilaku Istirahat", total: 87.8, ikhwan: 86.5, akhwat: 69.9, budi: 88.6 },
+            { no: 5, text: "Aku tidak merasa cukup dengan amal kebaikan yang sudah ku lakukan", cat: "istirahat", catText: "Perilaku Istirahat", total: 68.5, ikhwan: 69.6, akhwat: 88.6, budi: 59.1 },
+            { no: 6, text: "Aku tidak menggunakan handphone kecuali untuk hal-hal yang penting dan bermanfaat saja", cat: "istirahat", catText: "Perilaku Istirahat", total: 61.7, ikhwan: 64.9, akhwat: 60.2, budi: 56.8 },
+            { no: 7, text: "Dalam sepekan terakhir, saya lebih sering berbincang hal-hal yang positif dibandingkan membicarakan sesuatu yang sia-sia", cat: "istirahat", catText: "Perilaku Istirahat", total: 75.3, ikhwan: 77.0, akhwat: 72.7, budi: 79.5 },
+            { no: 8, text: "Aku sering berdialog dengan diri sendiri untuk mengevaluasi diri", cat: "istirahat", catText: "Perilaku Istirahat", total: 83.2, ikhwan: 85.8, akhwat: 78.4, budi: 93.2 }
+        ];
+
+        function getColorClass(score) {
+            if (score >= 85.0) return 'bg-emerald-100 text-emerald-900 font-medium';
+            if (score >= 70.0) return 'bg-blue-100 text-blue-900';
+            if (score >= 60.0) return 'bg-amber-100 text-amber-900';
+            return 'bg-red-100 text-red-900 font-bold';
+        }
+
+        function renderTable(filter) {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+
+            dataPenelitian.forEach(item => {
+                if (filter !== 'all' && item.cat !== filter) return;
+
+                // Membandingkan hanya 3 kelompok responden independen (bukan dengan gabungan)
+                const scores = [
+                    { name: 'AF Depok Ikhwan', val: item.ikhwan },
+                    { name: 'AF Depok Akhwat', val: item.akhwat },
+                    { name: 'Budi Ashari', val: item.budi }
+                ];
+                scores.sort((a, b) => b.val - a.val);
+
+                const highest = scores[0];
+                const lowest = scores[2];
+                const gap = (highest.val - lowest.val).toFixed(1);
+
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-50 transition-colors';
+                row.innerHTML = `
+                    <td class="p-2 font-mono text-slate-400">${item.no}</td>
+                    <td class="p-2 text-left-align font-medium text-slate-700">${item.text}</td>
+                    <td class="p-2 text-slate-500 text-[10px] font-medium">${item.catText}</td>
+                    <td class="p-2 font-bold bg-slate-800 text-amber-300">${item.total}%</td>
+                    <td class="p-2 ${getColorClass(item.ikhwan)}">${item.ikhwan}%</td>
+                    <td class="p-2 ${getColorClass(item.akhwat)}">${item.akhwat}%</td>
+                    <td class="p-2 ${getColorClass(item.budi)}">${item.budi}%</td>
+                    <td class="p-2 text-emerald-800 font-medium bg-emerald-50/40 text-[10px]">${highest.name}<br><span class="font-bold">(${highest.val}%)</span></td>
+                    <td class="p-2 text-red-800 font-medium bg-red-50/40 text-[10px]">${lowest.name}<br><span class="font-bold">(${lowest.val}%)</span></td>
+                    <td class="p-2 font-mono font-bold text-slate-600 bg-slate-50">${gap}%</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function filterCategory(category) {
+            renderTable(category);
+            const buttons = ['all', 'usia', 'amal', 'istirahat'];
+            buttons.forEach(btn => {
+                const el = document.getElementById(`btn-${btn}`);
+                if (btn === category) {
+                    el.className = "px-3 py-1 text-[11px] font-semibold rounded-md bg-white shadow-xs text-slate-800 font-bold";
+                } else {
+                    el.className = "px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800";
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTable('all');
+        });
+    </script>
+</body>
+</html>
