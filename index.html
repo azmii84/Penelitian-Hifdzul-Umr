@@ -12,9 +12,9 @@
         .sidebar-item-active { background-color: #0f172a; border-left: 4px solid #3b82f6; color: #ffffff; }
     </style>
 </head>
-<body class="block md:flex min-h-screen relative overflow-x-hidden">
+<body class="flex flex-col md:flex-row min-h-screen relative overflow-x-hidden">
 
-    <div class="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center sticky top-0 z-50 shadow-md">
+    <div class="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center sticky top-0 z-50 shadow-md w-full">
         <div class="flex items-center space-x-3">
             <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center font-bold text-xs">HU</div>
             <span class="font-bold text-xs uppercase tracking-wider">Hifdzul Umr</span>
@@ -24,7 +24,7 @@
         </button>
     </div>
 
-    <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-slate-300 flex flex-col justify-between shrink-0 transform -translate-x-full transition-transform duration-300 ease-in-out md:relative md:transform-none md:flex">
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-slate-300 flex flex-col justify-between shrink-0 transform -translate-x-full transition-transform duration-300 ease-in-out md:sticky md:top-0 md:h-screen md:transform-none md:flex">
         <div>
             <div class="p-6 border-b border-slate-800 text-center relative">
                 <button id="menu-close" class="md:hidden absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
@@ -66,7 +66,7 @@
 
     <div id="sidebar-backdrop" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
 
-    <main class="flex-1 p-4 md:p-8 overflow-y-auto w-full">
+    <main class="flex-1 p-4 md:p-8 overflow-y-auto w-full md:max-w-[calc(100%-16rem)]">
         
         <header class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-slate-200 pb-4 mb-6">
             <div>
@@ -180,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="overflow-x-auto class-scroll-custom">
+            <div class="overflow-x-auto">
                 <table class="w-full text-xs min-w-[1000px]" id="kuesioner-table">
                     <thead>
                         <tr class="bg-slate-800 text-white font-semibold">
@@ -215,7 +215,6 @@
     </main>
 
     <script>
-        // Data penelitian tetap sama sesuai lampiran
         const dataPenelitian = [
             { no: 1, text: "Aku selalu ingat bahwa waktu yang berlalu tidak akan terulang", cat: "usia", catText: "Sudut Pandang Usia", total: 91.8, ikhwan: 93.2, akhwat: 89.2, budi: 97.7 },
             { no: 2, text: "Aku tahu bahwa akhirat adalah tujuan", cat: "usia", catText: "Sudut Pandang Usia", total: 79.3, ikhwan: 96.6, akhwat: 93.8, budi: 84.1 },
@@ -295,7 +294,7 @@
             });
         }
 
-        // LOGIC JAVASCRIPT UNTUK RESPONSIVE TOGGLE MENU MOBILE/TABLET
+        // LOGIC TOGGLE MENU MOBILE
         const menuToggle = document.getElementById('menu-toggle');
         const menuClose = document.getElementById('menu-close');
         const sidebar = document.getElementById('sidebar');
