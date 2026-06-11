@@ -12,12 +12,24 @@
         .sidebar-item-active { background-color: #0f172a; border-left: 4px solid #3b82f6; color: #ffffff; }
     </style>
 </head>
-<body class="flex min-h-screen">
+<body class="block md:flex min-h-screen relative overflow-x-hidden">
 
-    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col justify-between shrink-0">
+    <div class="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center sticky top-0 z-50 shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center font-bold text-xs">HU</div>
+            <span class="font-bold text-xs uppercase tracking-wider">Hifdzul Umr</span>
+        </div>
+        <button id="menu-toggle" class="p-2 text-xl focus:outline-none hover:bg-slate-800 rounded transition-colors">
+            ☰
+        </button>
+    </div>
+
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-slate-300 flex flex-col justify-between shrink-0 transform -translate-x-full transition-transform duration-300 ease-in-out md:relative md:transform-none md:flex">
         <div>
-            <div class="p-6 border-b border-slate-800 text-center">
-                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-content-center mx-auto mb-2 shadow-lg">
+            <div class="p-6 border-b border-slate-800 text-center relative">
+                <button id="menu-close" class="md:hidden absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
+                
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg">
                     <span class="text-white font-bold text-lg">HU</span>
                 </div>
                 <h2 class="text-white font-bold tracking-wide text-sm uppercase">Hifdzul Umr</h2>
@@ -52,16 +64,18 @@
         </div>
     </aside>
 
-    <main class="flex-1 p-8 overflow-y-auto">
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
+
+    <main class="flex-1 p-4 md:p-8 overflow-y-auto w-full">
         
         <header class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-slate-200 pb-4 mb-6">
             <div>
-                <h1 class="text-xl font-bold text-slate-800 tracking-tight">Hasil Penelitian Penjagaan Usia Guru Berdasarkan Teori Imam Ibnul Jauzy</h1>
+                <h1 class="text-lg md:text-xl font-bold text-slate-800 tracking-tight">Hasil Penelitian Penjagaan Usia Guru Berdasarkan Teori Imam Ibnul Jauzy</h1>
                 <p class="text-xs text-slate-500 mt-0.5">Visualisasi Kuantitatif Persentase Capaian Hasil Instrumen Penelitian</p>
             </div>
         </header>
 
-        <section class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-xs flex items-center space-x-4">
                 <div class="p-3 bg-slate-100 text-slate-600 rounded-lg text-lg">👥</div>
                 <div>
@@ -127,9 +141,9 @@
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs lg:col-span-2">
-                <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-4 border-b pb-2">🏛️ Perbandingan Akumulatif Skor Keseluruhan Indikator</h3>
-                <div class="grid grid-cols-4 gap-2 text-center pt-4 items-end h-32">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs lg:col-span-2 overflow-x-auto">
+                <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-4 border-b pb-2 min-w-[450px]">🏛️ Perbandingan Akumulatif Skor Keseluruhan Indikator</h3>
+                <div class="grid grid-cols-4 gap-2 text-center pt-4 items-end h-32 min-w-[450px]">
                     <div class="flex flex-col items-center justify-end h-full border-r border-dashed border-slate-300 pr-2">
                         <span class="text-xs font-bold text-slate-600 mb-1">80.4%</span>
                         <div class="bg-slate-500 w-12 rounded-t-sm" style="height: 80.4%"></div>
@@ -154,20 +168,20 @@
             </div>
         </section>
 
-        <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between border-b pb-4 mb-4">
+        <section class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between border-b pb-4 mb-4 gap-3">
                 <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide">📋 Matriks Perbandingan Detail Setiap Butir Kuesioner</h3>
                 
-                <div class="flex items-center space-x-1 mt-3 md:mt-0 bg-slate-100 p-1 rounded-lg">
-                    <button onclick="filterCategory('all')" id="btn-all" class="px-3 py-1 text-[11px] font-semibold rounded-md tab-active bg-white shadow-xs text-slate-800 font-bold">Semua</button>
-                    <button onclick="filterCategory('usia')" id="btn-usia" class="px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Sudut Pandang Usia</button>
-                    <button onclick="filterCategory('amal')" id="btn-amal" class="px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Perilaku Amal</button>
-                    <button onclick="filterCategory('istirahat')" id="btn-istirahat" class="px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Perilaku Istirahat</button>
+                <div class="flex flex-wrap items-center gap-1 bg-slate-100 p-1 rounded-lg self-start xl:self-auto">
+                    <button onclick="filterCategory('all')" id="btn-all" class="px-2.5 py-1 text-[10px] md:text-[11px] font-semibold rounded-md bg-white shadow-xs text-slate-800 font-bold">Semua</button>
+                    <button onclick="filterCategory('usia')" id="btn-usia" class="px-2.5 py-1 text-[10px] md:text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Sudut Pandang Usia</button>
+                    <button onclick="filterCategory('amal')" id="btn-amal" class="px-2.5 py-1 text-[10px] md:text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Perilaku Amal</button>
+                    <button onclick="filterCategory('istirahat')" id="btn-istirahat" class="px-2.5 py-1 text-[10px] md:text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800">Perilaku Istirahat</button>
                 </div>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-xs" id="kuesioner-table">
+            <div class="overflow-x-auto class-scroll-custom">
+                <table class="w-full text-xs min-w-[1000px]" id="kuesioner-table">
                     <thead>
                         <tr class="bg-slate-800 text-white font-semibold">
                             <th class="p-2.5 w-10" rowspan="2">No</th>
@@ -181,12 +195,12 @@
                         </tr>
                         <tr class="bg-slate-700 text-white font-medium text-[10px]">
                             <th class="p-1.5 w-20">Kuttab AF Depok Ikhwan</th>
-                            <th class="p-1.5 w-20">Kuttab AF Depok Akhwat</th>
+                            <th class="p-1.5 w-20">Kuttam AF Depok Akhwat</th>
                             <th class="p-1.5 w-20">Kuttab Budi Ashari</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-200" id="table-body">
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
 
@@ -201,15 +215,12 @@
     </main>
 
     <script>
-        // Data mentah yang disesuaikan akurat berdasarkan Halaman 2 dan Halaman 3 lampiran berkas penelitian
+        // Data penelitian tetap sama sesuai lampiran
         const dataPenelitian = [
-            // KATEGORI 1: SUDUT PANDANG TENTANG USIA
             { no: 1, text: "Aku selalu ingat bahwa waktu yang berlalu tidak akan terulang", cat: "usia", catText: "Sudut Pandang Usia", total: 91.8, ikhwan: 93.2, akhwat: 89.2, budi: 97.7 },
             { no: 2, text: "Aku tahu bahwa akhirat adalah tujuan", cat: "usia", catText: "Sudut Pandang Usia", total: 79.3, ikhwan: 96.6, akhwat: 93.8, budi: 84.1 },
             { no: 3, text: "Aku bisa membedakan kebutuhan dan keinginan", cat: "usia", catText: "Sudut Pandang Usia", total: 84.2, ikhwan: 89.2, akhwat: 80.1, budi: 84.1 },
             { no: 4, text: "Aku tidak menyalahkan dan meratapi masa lalu", cat: "usia", catText: "Sudut Pandang Usia", total: 95.7, ikhwan: 79.7, akhwat: 77.8, budi: 100.0 },
-            
-            // KATEGORI 2: PERILAKU DALAM AMAL
             { no: 1, text: "Aku selalu bersungguh-sungguh ketika melakukan pekerjaan dan menyelesaikannya", cat: "amal", catText: "Perilaku Amal", total: 78.8, ikhwan: 78.4, akhwat: 76.7, budi: 88.6 },
             { no: 2, text: "Aku tidak perlu menunggu keadaan yang mendukung untuk beramal (Ramadhan untuk khatam Al-Qur'an atau program untuk membaca buku)", cat: "amal", catText: "Perilaku Amal", total: 77.7, ikhwan: 80.4, akhwat: 74.4, budi: 81.8 },
             { no: 3, text: "Aku berhati-hati dan mempertimbangkan konsekuensi sebelum bertindak", cat: "amal", catText: "Perilaku Amal", total: 80.2, ikhwan: 82.4, akhwat: 76.7, budi: 86.4 },
@@ -218,8 +229,6 @@
             { no: 6, text: "Aku berusaha menjaga keikhlasan dalam beramal", cat: "amal", catText: "Perilaku Amal", total: 77.2, ikhwan: 77.0, akhwat: 85.2, budi: 90.9 },
             { no: 7, text: "Aku memiliki amalan khusus yang rutin aku jaga", cat: "amal", catText: "Perilaku Amal", total: 79.9, ikhwan: 81.8, akhwat: 76.7, budi: 86.4 },
             { no: 8, text: "Aku memanfaatkan masa muda untuk hal yang bermanfaat", cat: "amal", catText: "Perilaku Amal", total: 78.0, ikhwan: 78.4, akhwat: 77.3, budi: 79.5 },
-            
-            // KATEGORI 3: PERILAKU KETIKA ISTIRAHAT
             { no: 1, text: "Aku tidak buru-buru ingin selesai ketika beramal karena ingin segera beristirahat", cat: "istirahat", catText: "Perilaku Istirahat", total: 69.6, ikhwan: 93.2, akhwat: 92.0, budi: 81.8 },
             { no: 2, text: "Aku berada di lingkungan yang mendukung kebaikan", cat: "istirahat", catText: "Perilaku Istirahat", total: 93.2, ikhwan: 72.3, akhwat: 64.2, budi: 97.7 },
             { no: 3, text: "Aku bersungguh-sungguh dan tidak mudah menyerah dalam mencapai tujuan", cat: "istirahat", catText: "Perilaku Istirahat", total: 79.3, ikhwan: 80.4, akhwat: 77.8, budi: 81.8 },
@@ -244,7 +253,6 @@
             dataPenelitian.forEach(item => {
                 if (filter !== 'all' && item.cat !== filter) return;
 
-                // Membandingkan hanya 3 kelompok responden independen (bukan dengan gabungan)
                 const scores = [
                     { name: 'AF Depok Ikhwan', val: item.ikhwan },
                     { name: 'AF Depok Akhwat', val: item.akhwat },
@@ -280,12 +288,27 @@
             buttons.forEach(btn => {
                 const el = document.getElementById(`btn-${btn}`);
                 if (btn === category) {
-                    el.className = "px-3 py-1 text-[11px] font-semibold rounded-md bg-white shadow-xs text-slate-800 font-bold";
+                    el.className = "px-2.5 py-1 text-[10px] md:text-[11px] font-semibold rounded-md bg-white shadow-xs text-slate-800 font-bold";
                 } else {
-                    el.className = "px-3 py-1 text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800";
+                    el.className = "px-2.5 py-1 text-[10px] md:text-[11px] font-semibold rounded-md text-slate-500 hover:text-slate-800";
                 }
             });
         }
+
+        // LOGIC JAVASCRIPT UNTUK RESPONSIVE TOGGLE MENU MOBILE/TABLET
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('-translate-x-full');
+            backdrop.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleSidebar);
+        menuClose.addEventListener('click', toggleSidebar);
+        backdrop.addEventListener('click', toggleSidebar);
 
         document.addEventListener('DOMContentLoaded', () => {
             renderTable('all');
